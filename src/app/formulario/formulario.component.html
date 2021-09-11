@@ -1,0 +1,31 @@
+<div class="formulario">
+    <div class="title">
+    <h1>Formulario de ingreso de datos</h1>
+</div>
+
+<hr>
+
+<div class="data">
+    <form name ="formEditAdd" [formGroup]="formEditAdd" (ngSubmit)="onSubmit()">
+        <div>
+            <label>Nombre:</label>
+            <input type="text" formControlName='nombre' placeholder="nombre" required>
+        </div>
+        <div>
+            <label>Apellido:</label>
+            <input type="text"  formControlName='apellido' placeholder="apellido" required>
+        </div>
+        <div>
+            <label>Procesado:</label>
+            <input type="text"  formControlName='procesado' placeholder="procesado" hidden>
+            false
+        </div>
+
+        <div>
+            <button type="submit" [disabled]="!formEditAdd.valid">Submit</button>
+            <button (click)='atras()'>Atras</button>
+        </div>
+    </form>
+
+</div>
+</div>

@@ -1,0 +1,25 @@
+<div class="list_all">
+    <div class="title">
+        <h1>Lista de usuarios</h1>
+        <button (click)='agregar()'>Agregar</button>
+        <hr>
+    </div>
+
+    <div class="list">
+        <table class="table">
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Proceso</th>
+                <th>Procesar</th>
+            </tr>
+            <tr *ngFor="let x of lista">
+                <td>{{x.nombre}}</td>
+                <td>{{x.apellido}}</td>
+                <td>{{x.procesado}}</td>
+                <!--routerLink='/formulario'-->
+                <td><button (click)='procesar(x)'>Procesar</button></td>
+            </tr>
+        </table>
+    </div>
+</div>
